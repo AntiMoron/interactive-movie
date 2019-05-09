@@ -4,7 +4,7 @@
   "description": "A int-film.",
   "main": "main.js",
   "scripts": {
-    "build": "electron-builder --win --x64",
+    "build": "rm -rf dist/ && electron-builder --win --x64",
     "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
