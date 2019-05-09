@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
+  "name": "interactive-movie",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A int-film.",
   "main": "main.js",
   "scripts": {
     "build": "electron-builder --win --x64",
