@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: #000000;
+      color: white;
+    }
+
+    div {
+      transition: all 200ms;
+    }
+
+    #bar {
+      background: white;
+      height: 3px;
+      top: 0;
+      transition: all 10s linear;
+    }
+
+    #outlet {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #video {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #question {
+      overflow: hidden;
+      background: #000000;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #answers {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .answer {
+      flex: 1;
+      text-align: center;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</body>
+
+</html>
