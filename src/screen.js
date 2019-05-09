@@ -53,7 +53,7 @@ function playVideo(node) {
                 setTimeout(() => {
                     document.querySelector('#question').style.height = "0";
                     playVideo(selection[firstOption.link]);
-                }, 10 * 1000);
+                }, 13 * 1000);
             }
         }
     };
