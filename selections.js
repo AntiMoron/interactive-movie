@@ -77,11 +77,13 @@ module.exports = {
         question: [
             {
                 text: '提及血迹',
-                link: 'a12'
+                link: 'a12',
+                en: 'mention the blood'
             },
             {
                 text: '递出手机',
-                link: 'a13'
+                link: 'a13',
+                en: 'give out cell phone'
             }
         ]
     },

@@ -33,16 +33,16 @@ function playVideo(node) {
     video.autoplay = "autoplay";
     video.style.width = '100%';
 //////////测试条///////////
-setTimeout(() => {
-    document.querySelector('#question').style.height = "80px";
-    const bar = document.querySelector('#bar');
-    bar.style.width = '100%';
-    bar.style.opacity = 1;
-    setTimeout(() => {
-        bar.style.width = 0;
-        bar.style.opacity = 0.1;
-    }, 200);
-}, 2000);
+// setTimeout(() => {
+//     document.querySelector('#question').style.height = "80px";
+//     const bar = document.querySelector('#bar');
+//     bar.style.width = '100%';
+//     bar.style.opacity = 1;
+//     setTimeout(() => {
+//         bar.style.width = 0;
+//         bar.style.opacity = 0.1;
+//     }, 200);
+// }, 2000);
 //////////测试条///////////
 
     video.onended = function () {
