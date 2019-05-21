@@ -3,12 +3,14 @@ module.exports = {
         src: './assets/1.mp4',
         question: [
             {
-                text: '鼓起勇气',
-                link: 'a2'
+                text: '递出纸条',
+                link: 'a2',
+                en: 'pass the message'
             },
             {
-                text: '犹豫退缩',
-                link: 'a3'
+                text: '不递纸条',
+                link: 'a3',
+                en: 'maybe later'
             }
         ]
     },
@@ -25,11 +27,13 @@ module.exports = {
         question: [
             {
                 text: '承认',
-                link: 'a5'
+                link: 'a5',
+                en: 'admit'
             },
             {
                 text: '否认',
-                link: 'a6'
+                link: 'a6',
+                en: 'deny'
             }
         ]
     },
@@ -49,12 +53,14 @@ module.exports = {
         src: './assets/8.mp4',
         question: [
             {
-                text: '让母亲处理',
-                link: 'a9'
+                text: '打开门让母亲看见血迹',
+                link: 'a9',
+                en: 'let mother help'
             },
             {
-                text: '独自处理',
-                link: 'a10'
+                text: '独自留在厕所处理血迹',
+                link: 'a10',
+                en: 'handle it alone'
             }
         ]
     },
@@ -92,11 +98,13 @@ module.exports = {
         question: [
             {
                 text: '接受',
-                link: 'a15'
+                link: 'a15',
+                en: 'accept'
             },
             {
                 text: '拒绝',
-                link: 'a16'
+                link: 'a16',
+                en: 'refuse'
             }
         ]
     },
@@ -113,11 +121,13 @@ module.exports = {
         question: [
             {
                 text: '偷听',
-                link: '18'
+                link: '18',
+                en: 'peep'
             },
             {
                 text: '偷窥',
-                link: '19'
+                link: '19',
+                en: 'peek'
             }
         ]
     },

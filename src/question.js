@@ -28,15 +28,27 @@ function question(answers, selectCallback) {
     let answerContainer = document.createElement('div');
     answerContainer.id = "answers";
     const pList = answers.map((answer) => {
+        const d = document.createElement('div');
+        d.className = 'answer';
         const p = document.createElement('p');
-        p.className = 'answer';
+        p.className = 'answer-cn';
         p.innerText = answer.text;
         p.onclick = function () {
             const ques = document.querySelector('#question');
             ques.style.height = '0';
             selectCallback && selectCallback(answer);
         };
-        return p;
+        const p2 = document.createElement('p');
+        p2.className = 'answer-en';
+        p2.innerText = answer.en;
+        p2.onclick = function () {
+            const ques = document.querySelector('#question');
+            ques.style.height = '0';
+            selectCallback && selectCallback(answer);
+        };
+        d.appendChild(p);
+        d.appendChild(p2);
+        return d;
     });
     pList.forEach(function (p) {
         answerContainer.appendChild(p);
