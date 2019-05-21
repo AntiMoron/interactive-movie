@@ -12,10 +12,10 @@ function question(answers, selectCallback) {
 
     setTimeout(() => {
         const video = document.querySelector('#video');
-        if (video) {
-            const bottom = window.innerHeight - (video.offsetTop + video.clientHeight);
-            container.style.bottom = bottom + 'px';
-        }
+        // if (video) {
+            // const bottom = window.innerHeight - (video.offsetTop + video.clientHeight);
+            // container.style.bottom = Math.max(0, bottom) + 'px';
+        // }
     }, 20);
 
     const nodes = [...(container.childNodes || [])];

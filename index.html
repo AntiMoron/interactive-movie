@@ -33,6 +33,8 @@
       top: 0;
       transition: all 6s linear;
       margin: 0 auto;
+      position: absolute;
+      top: 0;
     }
 
     #outlet {
@@ -57,12 +59,17 @@
       position: fixed;
       bottom: 0;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     #answers {
       display: flex;
       flex-direction: row;
       width: 100%;
+      margin-top: -1vh;
     }
 
     .answer {
@@ -70,17 +77,20 @@
       justify-content: center;
       align-items: center;
       color: white;
+
     }
 
     .answer-cn {
-      font-size: 3vh;
+      font-size: 2.2vh;
       text-align: center;
+      font-weight: bold;
       margin-bottom: 0;
     }
 
     .answer-en {
-      margin-top: 4px;
-      font-size: 1.5vh;
+      margin-top: 0;
+      font-size: 1.8vh;
+      padding-top: 0.5vh;
       text-align: center;
     }
   </style>

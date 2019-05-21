@@ -32,18 +32,6 @@ function playVideo(node) {
     video.id = "video";
     video.autoplay = "autoplay";
     video.style.width = '100%';
-//////////测试条///////////
-// setTimeout(() => {
-//     document.querySelector('#question').style.height = "80px";
-//     const bar = document.querySelector('#bar');
-//     bar.style.width = '100%';
-//     bar.style.opacity = 1;
-//     setTimeout(() => {
-//         bar.style.width = 0;
-//         bar.style.opacity = 0.1;
-//     }, 200);
-// }, 2000);
-//////////测试条///////////
 
     video.onended = function () {
         // 如果有下一个就播放下一个
@@ -52,7 +40,7 @@ function playVideo(node) {
             return;
         }
         if (!next && questionOption) {
-            document.querySelector('#question').style.height = "80px";
+            document.querySelector('#question').style.height = window.innerHeight * 0.18 + 'px';
             const bar = document.querySelector('#bar');
             bar.style.width = '100%';
             bar.style.opacity = 1;
@@ -77,6 +65,20 @@ function playVideo(node) {
         qDiv.style.height = '0';
         container.appendChild(qDiv);
     }
+    //////////测试条///////////
+    setTimeout(() => {
+        const question = document.querySelector('#question');
+        question.style = {};
+        question.style.height = window.innerHeight * 0.18 + 'px';
+        const bar = document.querySelector('#bar');
+        bar.style.width = '100%';
+        bar.style.opacity = 1;
+        setTimeout(() => {
+            bar.style.width = 0;
+            bar.style.opacity = 0.1;
+        }, 200);
+    }, 2000);
+    //////////测试条///////////
     document.body.appendChild(container);
 }
 
