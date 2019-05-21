@@ -1,11 +1,20 @@
 module.exports = {
     start: {
         src: './assets/1.mp4',
-        next: 'a2',
+        question: [
+            {
+                text: '鼓起勇气',
+                link: 'a2'
+            },
+            {
+                text: '犹豫退缩',
+                link: 'a3'
+            }
+        ]
     },
     a2: {
         src: './assets/2.mp4',
-        next: 'a3',
+        next: 'a4',
     },
     a3: {
         src: './assets/3.mp4',
@@ -15,18 +24,18 @@ module.exports = {
         src: './assets/4.mp4',
         question: [
             {
-                text: '递纸条',
+                text: '承认',
                 link: 'a5'
             },
             {
-                text: '不递纸条',
-                link: 'a26'
+                text: '否认',
+                link: 'a6'
             }
         ]
     },
     a5: {
         src: './assets/5.mp4',
-        next: 'a6',
+        next: 'a7',
     },
     a6: {
         src: './assets/6.mp4',
@@ -38,11 +47,20 @@ module.exports = {
     },
     a8: {
         src: './assets/8.mp4',
-        next: 'a9',
+        question: [
+            {
+                text: '让母亲处理',
+                link: 'a9'
+            },
+            {
+                text: '独自处理',
+                link: 'a10'
+            }
+        ]
     },
     a9: {
         src: './assets/9.mp4',
-        next: 'a10',
+        next: 'a11',
     },
     a10: {
         src: './assets/10.mp4',
@@ -50,11 +68,20 @@ module.exports = {
     },
     a11: {
         src: './assets/11.mp4',
-        next: 'a12',
+        question: [
+            {
+                text: '提及血迹',
+                link: 'a12'
+            },
+            {
+                text: '递出手机',
+                link: 'a13'
+            }
+        ]
     },
     a12: {
         src: './assets/12.mp4',
-        next: 'a13',
+        next: 'a14',
     },
     a13: {
         src: './assets/13.mp4',
@@ -62,11 +89,20 @@ module.exports = {
     },
     a14: {
         src: './assets/14.mp4',
-        next: 'a15',
+        question: [
+            {
+                text: '接受',
+                link: 'a15'
+            },
+            {
+                text: '拒绝',
+                link: 'a16'
+            }
+        ]
     },
     a15: {
         src: './assets/15.mp4',
-        next: 'a16',
+        next: 'a17',
     },
     a16: {
         src: './assets/16.mp4',
@@ -74,105 +110,26 @@ module.exports = {
     },
     a17: {
         src: './assets/17.mp4',
-        next: 'a18',
+        question: [
+            {
+                text: '偷听',
+                link: '18'
+            },
+            {
+                text: '偷窥',
+                link: '19'
+            }
+        ]
     },
     a18: {
         src: './assets/18.mp4',
-        next: 'a19',
+        next: 'final',
     },
     a19: {
-        src: './assets/119.mp4',
-        next: 'a20',
+        src: './assets/19.mp4',
+        next: 'final',
     },
-    a20: {
-        src: './assets/20.mp4',
-        question: [
-            {
-                text: '否认',
-                link: 21
-            },
-            {
-                text: '承认',
-                link: 36
-            },
-        ]
-    },
-    a21: {
-        src: './assets/21.mp4',
-        next: 'a22',
-    },
-    a22: {
-        src: './assets/22.mp4',
-        next: 'a23',
-    },
-    a23: {
-        src: './assets/23.mp4',
-        next: 'a24',
-    },
-    a24: {
-        src: './assets/24.mp4',
-        next: 'a25',
-    },
-    a25: {
-        src: './assets/25.mp4',
-    },
-    a26: {
-        src: './assets/26.mp4',
-        next: 'a27',
-    },
-    a27: {
-        src: './assets/27.mp4',
-        next: 'a28',
-    },
-    a28: {
-        src: './assets/28.mp4',
-        next: 'a29',
-    },
-    a29: {
-        src: './assets/29.mp4',
-        next: 'a30',
-    },
-    a30: {
-        src: './assets/30.mp4',
-        next: 'a31',
-    },
-    a31: {
-        src: './assets/31.mp4',
-        next: 'a32',
-    },
-    a32: {
-        src: './assets/32.mp4',
-        next: 'a33',
-    },
-    a33: {
-        src: './assets/33.mp4',
-        next: 'a34',
-    },
-    a34: {
-        src: './assets/34.mp4',
-        next: 'a35',
-    },
-    a35: {
-        src: './assets/35.mp4',
-        next: 'a13',
-    },
-    a36: {
-        src: './assets/36.mp4',
-        next: 'a37',
-    },
-    a37: {
-        src: './assets/37.mp4',
-        next: 'a38',
-    },
-    a38: {
-        src: './assets/38.mp4',
-        next: 'a39',
-    },
-    a39: {
-        src: './assets/39.mp4',
-        next: 'a40',
-    },
-    a40: {
-        src: './assets/40.mp4',
-    },
+    final: {
+        src: './assets/final.mp4'
+    }
 };
