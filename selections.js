@@ -130,6 +130,7 @@ module.exports = {
         next: 'final',
     },
     final: {
-        src: './assets/final.mp4'
+        src: './assets/final.mp4',
+        next: 'a1',
     }
 };
