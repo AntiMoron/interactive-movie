@@ -1,34 +1,22 @@
 module.exports = {
-    // start: {
-    //     src: './assets/1.mp4',
-    //     question: [
-    //         {
-    //             text: '递出纸条',
-    //             link: 'a2',
-    //             en: 'pass the message'
-    //         },
-    //         {
-    //             text: '不递纸条',
-    //             link: 'a3',
-    //             en: 'maybe later'
-    //         }
-    //     ]
-    // },
     start: {
+        src: './assets/1.mp4',
+        question: [
+            {
+                text: '递出纸条',
+                link: 'a2',
+                en: 'pass the message'
+            },
+            {
+                text: '不递纸条',
+                link: 'a3',
+                en: 'maybe later'
+            }
+        ]
+    },
+    a2: {
         src: './assets/2.mp4',
         next: 'a4',
-        question: [
-                    {
-                        text: '递出纸条',
-                        link: 'a2',
-                        en: 'pass the message'
-                    },
-                    {
-                        text: '不递纸条',
-                        link: 'a3',
-                        en: 'maybe later'
-                    }
-                ]
     },
     a3: {
         src: './assets/3.mp4',
