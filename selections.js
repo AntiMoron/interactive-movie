@@ -143,6 +143,6 @@ module.exports = {
     },
     a20: {
         src: './assets/20.mp4',
-        next: 'a1',
+        next: 'start',
     }
 };

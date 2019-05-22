@@ -16,6 +16,7 @@ document.onkeydown = function (e) {	//对整个页面文档监听
             });
         }
     }
+    console.log(keyNum)
     //判断如果用户按下了回车键（keycody=13）
     if (keyNum == 70) {
         console.log('F fast 4x');
@@ -24,7 +25,7 @@ document.onkeydown = function (e) {	//对整个页面文档监听
     }
     if (keyNum == 71) {
         console.log('G(Mega) fast speed 8x');
-        // 还原正常
+        // 8x
         changeSpeed(8);
     }
     //判断如果用户按下了空格键(keycode=32)，
@@ -32,6 +33,11 @@ document.onkeydown = function (e) {	//对整个页面文档监听
         console.log('Normal speed');
         // 还原正常
         changeSpeed(1);
+    }
+    if(keyNum == 72) {
+        console.log('High level fast speed 16x');
+        // 还原正常
+        changeSpeed(16);
     }
 }
 

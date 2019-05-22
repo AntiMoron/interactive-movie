@@ -27,7 +27,7 @@ function question(answers, selectCallback) {
     container.appendChild(bar);
     let answerContainer = document.createElement('div');
     answerContainer.id = "answers";
-    const pList = answers.map((answer) => {
+    const pList = answers.map((answer, idx) => {
         const d = document.createElement('div');
         d.className = 'answer';
         const p = document.createElement('p');
@@ -36,7 +36,7 @@ function question(answers, selectCallback) {
         p.onclick = function () {
             const ques = document.querySelector('#question');
             ques.style.height = '0';
-            selectCallback && selectCallback(answer);
+            selectCallback && selectCallback(answer, idx);
         };
         const p2 = document.createElement('p');
         p2.className = 'answer-en';
@@ -44,7 +44,7 @@ function question(answers, selectCallback) {
         p2.onclick = function () {
             const ques = document.querySelector('#question');
             ques.style.height = '0';
-            selectCallback && selectCallback(answer);
+            selectCallback && selectCallback(answer, idx);
         };
         d.appendChild(p);
         d.appendChild(p2);

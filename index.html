@@ -10,6 +10,16 @@
       src: url('./assets/STXIHEI.TTF');
     }
 
+    * {
+      moz-user-select: -moz-none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
     html,
     body {
       width: 100%;
@@ -45,7 +55,9 @@
       width: 100%;
     }
 
-    #video {
+    #v1,
+    #v2,
+    #v3 {
       position: absolute;
       margin: auto;
       top: 0;
