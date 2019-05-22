@@ -1,5 +1,30 @@
 const { question } = require('./question');
 const selection = require('../selections');
+/**
+ * 创建一个id的video
+ * @param {*} node 
+ */
+function createVideo(id, src, container, autoplay) {
+    let video = document.createElement('video');
+    container.appendChild(video);
+    video.src = src;
+    video.id = id;
+    if (autoplay) {
+        video.autoplay = "autoplay";
+    }
+    video.style.width = '100%';
+    video.playbackRate = window.__playbackRate || 1;
+    return video;
+}
+
+/**
+ * 隐藏video属性
+ * @param {*} video 一个videoDOM标签！！！！！！！！！
+ */
+function hideVideo(video) {
+
+    return ;
+}
 
 /**
  * 播放某个电影资源
@@ -42,7 +67,7 @@ function playVideo(node) {
             defaultSelectToken = setTimeout(() => {
                 document.querySelector('#question').style.height = "0";
                 playVideo(selection[firstOption.link]);
-            }, 8 * 1000);
+            }, 11 * 1000);
 
             document.querySelector('#question').style.height = window.innerHeight * 0.18 + 'px';
             const bar = document.querySelector('#bar');

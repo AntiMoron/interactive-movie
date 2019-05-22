@@ -32,7 +32,7 @@ function question(answers, selectCallback) {
         d.className = 'answer';
         const p = document.createElement('p');
         p.className = 'answer-cn';
-        p.innerText = '「' + answer.text + '」';
+        p.innerText = '「   ' + answer.text + '   」';
         p.onclick = function () {
             const ques = document.querySelector('#question');
             ques.style.height = '0';
