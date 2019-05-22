@@ -10,13 +10,13 @@ function question(answers, selectCallback) {
         container.id = "question";
     }
 
-    setTimeout(() => {
-        const video = document.querySelector('#video');
-        // if (video) {
-            // const bottom = window.innerHeight - (video.offsetTop + video.clientHeight);
-            // container.style.bottom = Math.max(0, bottom) + 'px';
-        // }
-    }, 20);
+    // setTimeout(() => {
+    //     const video = document.querySelector('#video');
+    //     // if (video) {
+    //         // const bottom = window.innerHeight - (video.offsetTop + video.clientHeight);
+    //         // container.style.bottom = Math.max(0, bottom) + 'px';
+    //     // }
+    // }, 20);
 
     const nodes = [...(container.childNodes || [])];
     nodes.forEach(function (node) {
@@ -32,7 +32,7 @@ function question(answers, selectCallback) {
         d.className = 'answer';
         const p = document.createElement('p');
         p.className = 'answer-cn';
-        p.innerText = answer.text;
+        p.innerText = '「' + answer.text + '」';
         p.onclick = function () {
             const ques = document.querySelector('#question');
             ques.style.height = '0';
