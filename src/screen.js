@@ -9,6 +9,8 @@ function playVideo(node) {
     if (!node) {
         node = selection['start'];
     }
+    console.info('==========Current Playing=========');
+    console.info(node);
     const src = node.src;
     const questionOption = node.question;
     const next = node.next;
@@ -32,14 +34,16 @@ function playVideo(node) {
     video.id = "video";
     video.autoplay = "autoplay";
     video.style.width = '100%';
-
+    video.playbackRate = window.__playbackRate || 1;
+    let defaultSelectToken = undefined;
     video.onended = function () {
-        // 如果有下一个就播放下一个
-        if (next) {
-            playVideo(selection[next]);
-            return;
-        }
-        if (!next && questionOption) {
+        if (questionOption) {
+            const firstOption = questionOption[0];
+            defaultSelectToken = setTimeout(() => {
+                document.querySelector('#question').style.height = "0";
+                playVideo(selection[firstOption.link]);
+            }, 8 * 1000);
+
             document.querySelector('#question').style.height = window.innerHeight * 0.18 + 'px';
             const bar = document.querySelector('#bar');
             bar.style.width = '100%';
@@ -48,36 +52,38 @@ function playVideo(node) {
                 bar.style.width = 0;
                 bar.style.opacity = 0.1;
             }, 200);
+            return;
+        }
 
-            if (questionOption) {
-                const firstOption = questionOption[0];
-                setTimeout(() => {
-                    document.querySelector('#question').style.height = "0";
-                    playVideo(selection[firstOption.link]);
-                }, 8 * 1000);
-            }
+        // 如果有下一个就播放下一个
+        if (next) {
+            playVideo(selection[next]);
+            return;
         }
     };
     if (questionOption) {
         const qDiv = question(questionOption, (answer) => {
             playVideo(selection[answer.link]);
+            if (defaultSelectToken !== undefined) {
+                clearTimeout(defaultSelectToken);
+            }
         });
         qDiv.style.height = '0';
         container.appendChild(qDiv);
     }
     //////////测试条///////////
-    setTimeout(() => {
-        const question = document.querySelector('#question');
-        question.style = {};
-        question.style.height = window.innerHeight * 0.18 + 'px';
-        const bar = document.querySelector('#bar');
-        bar.style.width = '100%';
-        bar.style.opacity = 1;
-        setTimeout(() => {
-            bar.style.width = 0;
-            bar.style.opacity = 0.1;
-        }, 200);
-    }, 2000);
+    // setTimeout(() => {
+    //     const question = document.querySelector('#question');
+    //     question.style = {};
+    //     question.style.height = window.innerHeight * 0.18 + 'px';
+    //     const bar = document.querySelector('#bar');
+    //     bar.style.width = '100%';
+    //     bar.style.opacity = 1;
+    //     setTimeout(() => {
+    //         bar.style.width = 0;
+    //         bar.style.opacity = 0.1;
+    //     }, 200);
+    // }, 2000);
     //////////测试条///////////
     document.body.appendChild(container);
 }

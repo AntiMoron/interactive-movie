@@ -123,26 +123,26 @@ module.exports = {
         question: [
             {
                 text: '偷听',
-                link: '18',
+                link: 'a18',
                 en: 'peep'
             },
             {
                 text: '偷窥',
-                link: '19',
+                link: 'a19',
                 en: 'peek'
             }
         ]
     },
     a18: {
         src: './assets/18.mp4',
-        next: 'final',
+        next: 'a20',
     },
     a19: {
         src: './assets/19.mp4',
-        next: 'final',
+        next: 'a20',
     },
-    final: {
-        src: './assets/final.mp4',
+    a20: {
+        src: './assets/20.mp4',
         next: 'a1',
     }
 };
