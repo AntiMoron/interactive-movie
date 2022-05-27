@@ -1,3 +1,13 @@
+function startListenWords(_handler) {
+    function handler(e) {
+        _handler(e);
+    }
+    document.addEventListener('onkeydown', handler);
+  return function() {
+      document.removeEventListener('onkeydown', handler);
+  };
+}
+
 /**
  * 弹出某个问题
  * @param {*} answers 回答列表
@@ -48,6 +58,11 @@ function question(answers, selectCallback) {
         };
         d.appendChild(p);
         d.appendChild(p2);
+        startListenWords(function(e){
+            if(e.key.toLowerCase() === answer.key) {
+              selectCallback && selectCallback(answer, idx);
+            }
+        });
         return d;
     });
     pList.forEach(function (p) {
