@@ -5,12 +5,14 @@ module.exports = {
             {
                 text: '递出纸条',
                 link: 'a2',
-                en: 'pass the message'
+                en: 'pass the message',
+                key: 'a',
             },
             {
                 text: '不递纸条',
                 link: 'a3',
                 en: 'maybe later'
+                key: 'b',
             }
         ]
     },
