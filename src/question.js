@@ -58,9 +58,10 @@ function question(answers, selectCallback) {
         };
         d.appendChild(p);
         d.appendChild(p2);
-        startListenWords(function(e){
-            if(e.key.toLowerCase() === answer.key) {
-              selectCallback && selectCallback(answer, idx);
+        const dtor = startListenWords(function(e){
+            if (e.key.toLowerCase() === answer.key) {
+                dtor();
+                selectCallback && selectCallback(answer, idx);
             }
         });
         return d;
